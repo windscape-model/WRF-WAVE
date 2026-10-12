@@ -1,0 +1,60 @@
+# WRF-WAVE: The Weather Research and Forecasting Model with Moving Wave Capability
+
+WRF-WAVE adds a phase-resolved, moving ocean-surface-wave capability to the
+Weather Research and Forecasting (WRF) Model, version 3.8.1. The moving-wave
+capability is implemented in the ARW (`dyn_em`) dynamical core as a prescribed
+moving lower boundary that represents propagating surface waves. This enables
+high-fidelity large-eddy simulation (LES) of airflow over moving surface waves.
+
+This work is built upon the immersed-boundary method (IBM) implementation in
+this WRF codebase, which was previously developed and released by Lawrence
+Livermore National Laboratory (LLNL) (see
+`README_notice_for_immersed_boundary_method`).
+
+Initial moving-wave capability, v1.0 — Developer: Peiyun Zhu
+
+## Requirements
+
+- Built on WRF v3.8.1; the standard WRF build prerequisites apply
+  (Fortran and C compilers, MPI, NetCDF).
+- **Double precision is required.** WRF must be configured with the `-r8`
+  option.
+
+## Building
+
+```
+./clean -a
+./configure -r8
+# Select your compiler / parallelism option from the configure menu
+# (for example, an Intel dmpar build).
+./compile em_les
+```
+
+The moving-wave and immersed-boundary cases are built and run through the
+idealized LES case (`em_les`). The wave initialization lives in
+`dyn_em/module_initialize_les.F`, and the immersed-boundary routines are in
+`dyn_em/module_ibm.F`.
+
+## Running
+
+The moving-wave configuration (wave amplitude, frequency, wavenumber, the
+`move`/`test_wave` switches, etc.) is set directly in the source code; there
+is no namelist interface for these wave parameters.
+
+## Citation
+
+If you use this code, please cite the following publications:
+
+- Zhu, P., Li, T., Mirocha, J. D., Arthur, R. S., Wu, Z., & Fringer, O. B.
+  (2023). A moving-wave implementation in WRF to study the impact of surface
+  water waves on the atmospheric boundary layer. *Monthly Weather Review*,
+  151(11), 2883-2903.
+- Li, T., Zhu, P., Mirocha, J. D., & Fringer, O. B. (2025). A large-eddy
+  simulation study in WRF on wind over broadband waves of different directions
+  and spreading widths. *Monthly Weather Review*, 153(6), 1045-1063.
+
+## License / Distribution
+
+WRF-WAVE is distributed under the BSD 3-Clause License; see LICENSE. Version 1.0 is
+released under LLNL release number LLNL-CODE-2025146; later versions inherit this
+license.
