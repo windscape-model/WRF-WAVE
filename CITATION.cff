@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the following publications."
+type: software
+title: "WRF-WAVE: the Weather Research and Forecasting model with a moving bottom boundary and wave phase-resolved capability"
+version: "1.0"
+date-released: "2026-10-12"
+license: BSD-3-Clause
+repository-code: "https://github.com/windscape-model/WRF-WAVE"
+abstract: >-
+  WRF-WAVE adds a phase-resolved, moving ocean-surface-wave capability to the
+  Weather Research and Forecasting (WRF) Model, version 3.8.1. The moving-wave
+  capability is implemented in the ARW (dyn_em) dynamical core as a prescribed
+  moving lower boundary that represents propagating surface waves. This enables
+  high-fidelity large-eddy simulation (LES) of airflow over moving surface waves.
+keywords:
+  - WRF
+  - large-eddy simulation
+  - ocean surface waves
+  - moving wave
+  - wind-wave interaction
+  - atmospheric boundary layer
+authors:
+  - family-names: Zhu
+    given-names: Peiyun
+    affiliation: Stanford University
+  - family-names: Li
+    given-names: Tianyi
+    affiliation: Lawrence Livermore National Laboratory
+    orcid: "https://orcid.org/0000-0001-5324-7849"
+  - family-names: Mirocha
+    given-names: Jeffrey D.
+    affiliation: Lawrence Livermore National Laboratory
+    orcid: "https://orcid.org/0000-0001-5914-6168"
+  - family-names: Fringer
+    given-names: Oliver B.
+    affiliation: Stanford University
+    orcid: "https://orcid.org/0000-0003-3176-6925"
+preferred-citation:
+  type: article
+  title: "A Moving-Wave Implementation in WRF to Study the Impact of Surface Water Waves on the Atmospheric Boundary Layer"
+  authors:
+    - family-names: Zhu
+      given-names: Peiyun
+    - family-names: Li
+      given-names: Tianyi
+    - family-names: Mirocha
+      given-names: Jeffrey D.
+    - family-names: Arthur
+      given-names: Robert S.
+    - family-names: Wu
+      given-names: Zhao
+    - family-names: Fringer
+      given-names: Oliver B.
+  journal: Monthly Weather Review
+  volume: 151
+  issue: 11
+  start: 2883
+  end: 2903
+  year: 2023
+  doi: 10.1175/MWR-D-23-0077.1
+references:
+  - type: article
+    title: "A Large-Eddy Simulation Study in WRF on Wind over Broadband Waves of Different Directions and Spreading Widths"
+    authors:
+      - family-names: Li
+        given-names: Tianyi
+      - family-names: Zhu
+        given-names: Peiyun
+      - family-names: Mirocha
+        given-names: Jeffrey D.
+      - family-names: Fringer
+        given-names: Oliver B.
+    journal: Monthly Weather Review
+    volume: 153
+    issue: 6
+    start: 1045
+    end: 1063
+    year: 2025
+    doi: 10.1175/MWR-D-24-0131.1
