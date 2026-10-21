@@ -4,6 +4,7 @@ type: software
 title: "WRF-WAVE: the Weather Research and Forecasting model with a moving bottom boundary and wave phase-resolved capability"
 version: "1.0"
 date-released: "2026-10-12"
+doi: 10.5281/zenodo.23517271
 license: BSD-3-Clause
 repository-code: "https://github.com/windscape-model/WRF-WAVE"
 abstract: >-

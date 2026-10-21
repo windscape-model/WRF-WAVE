@@ -2,6 +2,8 @@
 
 Version 1.0
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23517271.svg)](https://doi.org/10.5281/zenodo.23517271)
+
 This repository is WRF v3.8.1 with a moving bottom boundary and wave
 phase-resolved capability. For the build and run instructions, the
 [license](LICENSE) and the citation of WRF-WAVE, see
